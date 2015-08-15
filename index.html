@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache" lang="de">
+
+<head>
+    <title>Trainingstimer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link href="./css/TrainTimer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/themes/trainTimerTheme.css" />
+    <link rel="stylesheet" href="./css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="./scripts/jQueryMobile/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="./scripts/jQueryMobile/jquery-2.1.4.min.js"></script>
+    <script src="./scripts/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts/TrainTimer.js">
+    </script>
+</head>
+
+<body>
+    <div data-role="page" id="theTimer" data-theme="a">
+        <header data-role="header" data-theme="a">
+            <h1>Trainingstimer</h1>
+            <a href="#settings" data-icon="gear" data-iconpos="notext"></a>
+        </header>
+
+        <div id="mainPart" data-role="content" class="ui-body-a">
+            <div class="displayBlock">
+                <span id="timeLeft" class="bigDisplay"></span>
+            </div>
+        </div>
+        <audio id="audioPlayer" src="./audio/lastFiveSeconds.ogg" preload="auto"></audio>
+        <button id="toggleButton" class="ui-btn ui-btn-a ui-icon-power ui-btn-icon-notext ui-corner-all ui-btn-icon-left" onclick="toggleTimer()" data-theme="a" data-inline="false">Start
+        </button>
+    </div>
+    <!-- Page theTimer -->
+
+    <div data-role="page" id="settings" data-theme="a">
+
+        <header data-role="header" data-theme="a">
+            <h1>Einstellungen</h1>
+            <a href="#theTimer" data-icon="arrow-l" data-iconpos="notext">Timer</a>
+        </header>
+        <div data-role="content">
+            <form>
+                <label for="activeTime">aktive Zeit (in Sekunden)</label>
+                <input data-clear-btn="false" name="activeTime" pattern="[0-9]*" id="activeTime" value="30" type="number">
+                <label for="pauseTime">Pausenzeit (in Sekunden)</label>
+                <input data-clear-btn="false" name="pauseTime" pattern="[0-9]*" id="pauseTime" value="30" type="number">
+                <label for="reactionTime">Reaktionszeit (in Millisekunden)</label>
+                <input data-clear-btn="false" name="reactionTime" pattern="[0-9]*" id="reactionTime" value="200" type="number">
+                <label for="audioCheckbox">akustisches Signal</label>
+                <input data-role="flipswitch" name="audioCheckbox" id="audioCheckbox" data-on-text="Ein" data-off-text="Aus" data-wrapper-class="custom-label-flipswitch" type="checkbox">
+            </form>
+        </div>
+        <button id="saveButton" onclick="saveSettings()" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-icon-left" data-theme="a">Sichern</button>
+    </div>
+    <!-- Page settings -->
+
+</body>
+
+</html>

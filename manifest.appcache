@@ -1,0 +1,24 @@
+CACHE MANIFEST
+
+# for TrainTimer
+# 2015-08-15 P. Brockfeld
+#
+# version: 0.1.3
+
+CACHE:
+index.html
+favicon.ico
+audio/lastFiveSeconds.ogg
+css/TrainTimer.min.css
+css/themes/jquery.mobile.icons.min.css
+css/themes/PermianSansTypeface-webfont.eot
+css/themes/PermianSansTypeface-webfont.svg
+css/themes/PermianSansTypeface-webfont.ttf
+css/themes/PermianSansTypeface-webfont.woff
+css/themes/trainTimerTheme.min.css
+css/themes/images/ajax-loader.gif
+scripts/TrainTimer.min.js
+scripts/jQueryMobile/jquery-2.1.4.min.js
+scripts/jQueryMobile/jquery.mobile-1.4.5.min.js
+scripts/jQueryMobile/jquery.mobile.structure-1.4.5.min.css
+
