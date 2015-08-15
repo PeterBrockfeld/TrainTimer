@@ -1,5 +1,4 @@
 # TrainTimer
-<<<<<<< HEAD
 
 ## Table of Contents
 
@@ -31,6 +30,4 @@ The app uses the [http://jquerymobile.com/](jQuery mobile) framework. Thus it is
 ## License
 
 Copyright (c) 2015 Peter Brockfeld. See the LICENSE.md file for license rights and limitations (MIT).
-=======
-Training time: study on offline-capable web application
->>>>>>> c4f404243b3a41e1cfad3fde5790690a75edc5af
+
